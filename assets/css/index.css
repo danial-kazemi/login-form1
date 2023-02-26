@@ -1,38 +1,48 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
 *{ 
     margin: 0;
     padding: 0;
-    font-family: "roboto", "sans-serif";   
+    font-family: "roboto", "sans-serif"; 
+    font-weight: 300;  
 }
-section{
+html {
+    font-size: 16px;
+}
+section {
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
     width: 100%;
-    background: rgb(98, 158, 29);
+    background: url(./images/background6.jpg) no-repeat;
+    background-position: center;
+    background-size: cover;
+
 }
-.form-box{
+.form-box {
     position: relative;
     width: 400px;
     height: 450px;
-    background: red;
+    background: transparent;
+    border: 2px solid rgba(255,255,255,0.5);
+    backdrop-filter: blur(15px);
+    border-radius: 20px;
     display: flex;
     justify-content: center;
     align-items: center;    
 }
-h2{
+h2 {
     font-size: 2rem;
     color: #fff;
     text-align: center;
 }
-.inputbox{
+.inputbox {
     position: relative;
     margin: 30px 0;
     width: 310px;
     border-bottom: 2px solid #fff;
 }
-.inputbox label{
+.inputbox label {
     position: absolute;
     top: 50%;
     left: 5px;
@@ -40,6 +50,11 @@ h2{
     color: #fff;
     font-size: 1rem ;
     pointer-events: none;
+    transition: .5s;
+}
+input:focus ~ label,
+input:valid ~ label {
+    top: -5px;
 }
 .inputbox input {
     width: 100%;
@@ -50,5 +65,54 @@ h2{
     font-size: 1rem;
     padding: 0 35px 0 5px;
     color: #fff;
+}
+.inputbox ion-icon {
+   position: absolute; 
+   right: 8px;
+   color: #fff;
+   font-size: 1.2rem;
+   top: 20px;
+}
+.forget {
+    margin:  -15px 0 15px;
+    font-size: .9rem;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+}
+.forget label input {
+    margin-right: 3px;
+}
+.forget  label a {
+    color: #fff;
+    text-decoration: none;
+}
+.forget  label a:hover {    
+    text-decoration: underline;
+}
+button {
+    width: 100%;
+    height: 40px;
+    border-radius: 40px;
+    background-color: #fff;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 500;
+}
+.register {
+    font-size: .9 rem;
+    color: #fff;
+    text-align: center;
+    margin: 25px 0 10px;
+}
+.register p a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 500;
+}
+.register p a:hover {
+    text-decoration: underline;
 }
 
